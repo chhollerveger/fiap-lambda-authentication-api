@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "deploy": "export NODE_ENV=dev && sls deploy",
+    "deploy": "export NODE_ENV=dev && sls package && sls deploy",
     "sls:start": "export NODE_ENV=dev && npm run build && sls offline start --noAuth --noTimeout --noPrependStageInUrl"
   },
   "engines": {
@@ -22,7 +22,6 @@
     "@serverless/typescript": "^3.38.0",
     "@types/aws-lambda": "^8.10.136",
     "@types/node": "^20.11.25",
-    "esbuild": "^0.20.1",
     "json-schema-to-ts": "^3.0.0",
     "serverless-dotenv-plugin": "^6.0.0",
     "serverless-offline": "^13.3.3",
