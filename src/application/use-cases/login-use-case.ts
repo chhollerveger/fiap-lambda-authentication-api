@@ -10,7 +10,7 @@ export class LoginUseCaseImpl implements LoginUseCase {
   ) { }
 
   public async execute(request: LoginRequestDto): Promise<SessionResponseDto> {
-    const credential = new Credential(request.user, request.password)
+    const credential = new Credential(request.email, request.password)
     const session = await this.authenticationRepository.authenticate(credential)
     return session.toResponse();
   }

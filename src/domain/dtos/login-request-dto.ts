@@ -1,4 +1,4 @@
 export type LoginRequestDto = {
-  user: string,
+  email: string,
   password: string
 }
