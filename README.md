@@ -1,10 +1,18 @@
 # fiap-lambda-authentication-api
 
-## GitHub Actions
+## Authentication Architecture
+
+![Authentication Architecture](images/authentication-architecture.png "Authentication Architecture")
+
+## Workflow Architecture
+
+![Workflow Architecture](images/workflow-architecture.png "Workflow Architecture")
+
+### GitHub Actions
 
 GitHub Actions allows you to automate, customize, and execute software development workflows directly in your GitHub repository.
 
-## Prerequisites
+#### Prerequisites
 
 - An AWS account
 - Create an IAM user in AWS with the following permissions:
@@ -17,12 +25,13 @@ GitHub Actions allows you to automate, customize, and execute software developme
   - AmazonCognitoDeveloperAuthenticatedIdentities
 - Securely store the AWS user access key and secret access key
 
-## Adding Secrets to GitHub
+#### Adding Secrets to GitHub
 
 1. Access the settings of your forked repository on GitHub.
 2. Click on "Secrets" in the left sidebar and then on "New repository secret".
 3. Add your AWS API key and secret access key as secrets (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`).
+4. Add the Amazon Cognito region, user pool identifier, and client identifier as secrets (`COGNITO_REGION`, `COGNITO_USER_POOL_ID`, and `COGNITO_APP_CLIENT_ID`).
 
-## Starting the Workflow
+#### Starting the Workflow
 
 After adding your secrets, commit your changes locally and push them to GitHub. The workflow will start automatically, and you can monitor its progress in the "Actions" tab of your repository.
