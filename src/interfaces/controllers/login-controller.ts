@@ -1,7 +1,7 @@
-import { HttpResponse, HttpResponseCreator } from "src/domain/http/http-response";
+import { HttpResponse, HttpResponseCreator } from "../../domain/http/http-response";
 import { IController } from "../../domain/contracts/controller";
-import { LoginRequestDto } from "src/domain/dtos/login-request-dto";
-import { LoginUseCase } from "src/domain/contracts/login-use-case";
+import { LoginRequestDto } from "../../domain/dtos/login-request-dto";
+import { LoginUseCase } from "../../domain/contracts/login-use-case";
 import { StatusCodes } from "http-status-codes";
 
 export class LoginController implements IController {

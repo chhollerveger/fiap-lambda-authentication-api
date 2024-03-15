@@ -1,8 +1,8 @@
-import { Credential } from "src/domain/entities/credential";
-import { LoginUseCase } from "src/domain/contracts/login-use-case";
-import { AuthenticationRepository } from "src/domain/contracts/authentication-repository";
-import { LoginRequestDto } from "src/domain/dtos/login-request-dto";
-import { SessionResponseDto } from "src/domain/dtos/session-response-dto";
+import { Credential } from "../../domain/entities/credential";
+import { LoginUseCase } from "../../domain/contracts/login-use-case";
+import { AuthenticationRepository } from "../../domain/contracts/authentication-repository";
+import { LoginRequestDto } from "../../domain/dtos/login-request-dto";
+import { SessionResponseDto } from "../../domain/dtos/session-response-dto";
 
 export class LoginUseCaseImpl implements LoginUseCase {
   constructor(

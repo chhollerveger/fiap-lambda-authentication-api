@@ -1,7 +1,7 @@
-import { AuthenticationRepository } from "src/domain/contracts/authentication-repository";
-import { AuthorizeUseCase } from "src/domain/contracts/authorize-use-case";
-import { AuthorizeRequestDto } from "src/domain/dtos/authorize-request-dto";
-import { Session } from "src/domain/entities/session";
+import { AuthenticationRepository } from "../../domain/contracts/authentication-repository";
+import { AuthorizeUseCase } from "../../domain/contracts/authorize-use-case";
+import { AuthorizeRequestDto } from "../../domain/dtos/authorize-request-dto";
+import { Session } from "../../domain/entities/session";
 
 export class AuthorizeUseCaseImpl implements AuthorizeUseCase {
   constructor(

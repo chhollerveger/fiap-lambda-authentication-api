@@ -1,4 +1,4 @@
-import { Exception } from "src/domain/http/errors";
+import { Exception } from "../../domain/http/errors";
 
 export type HttpResponseHeader = {
   [header: string]: string | number | boolean;

@@ -1,6 +1,6 @@
 import * as Joi from 'joi';
-import { SessionResponseDto } from 'src/domain/dtos/session-response-dto';
-import { BadRequestException } from 'src/domain/http/errors';
+import { SessionResponseDto } from '../../domain/dtos/session-response-dto';
+import { BadRequestException } from '../../domain/http/errors';
 
 export class Session {
   constructor(public accessToken: string) {

@@ -1,5 +1,5 @@
 import * as Joi from 'joi';
-import { BadRequestException } from 'src/domain/http/errors';
+import { BadRequestException } from '../../domain/http/errors';
 
 export class Credential {
   constructor(public user: string, public password: string) {

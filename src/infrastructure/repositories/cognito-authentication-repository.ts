@@ -1,8 +1,8 @@
-import { AuthenticationRepository } from "src/domain/contracts/authentication-repository";
-import { Credential } from "src/domain/entities/credential";
-import { Session } from "src/domain/entities/session";
-import { UnauthorizedException } from "src/domain/http/errors";
-import { AwsCognitoClientProvider } from "src/infrastructure/clients/aws/aws-cognito-client-provider";
+import { AuthenticationRepository } from "../../domain/contracts/authentication-repository";
+import { Credential } from "../../domain/entities/credential";
+import { Session } from "../../domain/entities/session";
+import { UnauthorizedException } from "../../domain/http/errors";
+import { AwsCognitoClientProvider } from "../../infrastructure/clients/aws/aws-cognito-client-provider";
 
 export class CognitoAuthenticationRepository implements AuthenticationRepository {
   constructor(private readonly client: AwsCognitoClientProvider) { }

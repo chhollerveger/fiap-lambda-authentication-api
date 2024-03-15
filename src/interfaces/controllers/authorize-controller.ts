@@ -1,8 +1,8 @@
-import { HttpResponse, HttpResponseCreator } from "src/domain/http/http-response";
+import { HttpResponse, HttpResponseCreator } from "../../domain/http/http-response";
 import { IController } from "../../domain/contracts/controller";
 import { StatusCodes } from "http-status-codes";
-import { AuthorizeRequestDto } from "src/domain/dtos/authorize-request-dto";
-import { AuthorizeUseCase } from "src/domain/contracts/authorize-use-case";
+import { AuthorizeRequestDto } from "../../domain/dtos/authorize-request-dto";
+import { AuthorizeUseCase } from "../../domain/contracts/authorize-use-case";
 
 export class AuthorizeController implements IController {
   constructor(
