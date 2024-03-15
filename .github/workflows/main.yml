@@ -9,13 +9,24 @@ jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+
+    - name: Set Environment Variables
+      run: |
+        echo "COGNITO_REGION=${{ secrets.COGNITO_REGION }}" >> .env
+        echo "COGNITO_USER_POOL_ID=${{ secrets.COGNITO_USER_POOL_ID }}" >> .env
+        echo "COGNITO_APP_CLIENT_ID=${{ secrets.COGNITO_APP_CLIENT_ID }}" >> .env
+
     - run: npm install
+
     - name: serverless deploy
       uses: serverless/github-action@v3.2
       with:

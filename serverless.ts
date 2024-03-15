@@ -21,25 +21,19 @@ const serverlessConfiguration: AWS = {
     },
   },
   plugins: [
-    'serverless-esbuild',
     'serverless-offline',
     'serverless-dotenv-plugin'
   ],
   package: {
     individually: true,
     excludeDevDependencies: true,
+    exclude: ['./**', '!node_modules/**'],
   },
   custom: {
     ['serverless-offline']: {
       httpPort: 3000,
       websocketPort: 3001,
       lambdaPort: 3002
-    },
-    esbuild: {
-      bundle: true,
-      minify: false,
-      sourcemap: true,
-      keepOutputDirectory: true
     }
   },
   functions: {

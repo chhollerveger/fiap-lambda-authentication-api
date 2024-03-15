@@ -2,7 +2,7 @@
   "name": "fiap-lambda-authentication-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "serverless.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
@@ -25,7 +25,6 @@
     "esbuild": "^0.20.1",
     "json-schema-to-ts": "^3.0.0",
     "serverless-dotenv-plugin": "^6.0.0",
-    "serverless-esbuild": "^1.52.1",
     "serverless-offline": "^13.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
