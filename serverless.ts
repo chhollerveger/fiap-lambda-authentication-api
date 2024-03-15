@@ -7,7 +7,7 @@ const serverlessConfiguration: AWS = {
     name: 'aws',
     runtime: 'nodejs18.x',
     stage: '${env:NODE_ENV}',
-    region: 'sa-east-1',
+    region: 'us-east-1',
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
@@ -15,7 +15,6 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       REGION: '${self:provider.region}',
-      STAGE: '${self:provider.stage}',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
     },
   },
