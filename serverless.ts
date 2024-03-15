@@ -43,7 +43,7 @@ const serverlessConfiguration: AWS = {
   },
   functions: {
     login: {
-      handler: 'dist/interfaces/handlers/login.handler',
+      handler: 'dist/interfaces/index.login',
       events: [
         {
           http: {
@@ -55,7 +55,7 @@ const serverlessConfiguration: AWS = {
       ]
     },
     authorize: {
-      handler: 'dist/interfaces/handlers/authorize.handler',
+      handler: 'dist/interfaces/index.authorize',
       events: [
         {
           http: {
