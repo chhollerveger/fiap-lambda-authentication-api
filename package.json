@@ -28,7 +28,6 @@
     "serverless-esbuild": "^1.52.1",
     "serverless-offline": "^13.3.3",
     "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.4.2"
   },
   "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
