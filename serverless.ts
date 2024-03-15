@@ -27,6 +27,7 @@ const serverlessConfiguration: AWS = {
   package: {
     individually: true,
     excludeDevDependencies: true,
+    exclude: ['./**', '!node_modules/**'],
   },
   custom: {
     ['serverless-offline']: {
