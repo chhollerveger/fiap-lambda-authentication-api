@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "deploy": "export NODE_ENV=dev && sls package && sls deploy",
+    "sls:deploy": "export NODE_ENV=dev && sls package && sls deploy",
     "sls:start": "export NODE_ENV=dev && npm run build && sls offline start --noAuth --noTimeout --noPrependStageInUrl"
   },
   "engines": {
