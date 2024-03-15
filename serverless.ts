@@ -3,6 +3,7 @@ import type { AWS } from '@serverless/typescript';
 const serverlessConfiguration: AWS = {
   service: 'fiap-lambda-authentication-api',
   frameworkVersion: '3',
+  useDotenv: true,
   provider: {
     name: 'aws',
     runtime: 'nodejs18.x',
@@ -27,7 +28,6 @@ const serverlessConfiguration: AWS = {
   package: {
     individually: true,
     excludeDevDependencies: true,
-    exclude: ['./**', '!node_modules/**'],
   },
   custom: {
     ['serverless-offline']: {
@@ -39,11 +39,12 @@ const serverlessConfiguration: AWS = {
       bundle: true,
       minify: false,
       sourcemap: true,
+      keepOutputDirectory: true
     }
   },
   functions: {
     login: {
-      handler: 'dist/interfaces/index.login',
+      handler: 'dist/interfaces/handlers/login.handler',
       events: [
         {
           http: {
@@ -55,7 +56,7 @@ const serverlessConfiguration: AWS = {
       ]
     },
     authorize: {
-      handler: 'dist/interfaces/index.authorize',
+      handler: 'dist/interfaces/handlers/authorize.handler',
       events: [
         {
           http: {
