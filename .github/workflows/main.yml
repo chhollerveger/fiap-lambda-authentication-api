@@ -21,6 +21,7 @@ jobs:
 
     - name: Set Environment Variables
       run: |
+        echo "NODE_ENV=dev" >> .env
         echo "COGNITO_REGION=${{ secrets.COGNITO_REGION }}" >> .env
         echo "COGNITO_USER_POOL_ID=${{ secrets.COGNITO_USER_POOL_ID }}" >> .env
         echo "COGNITO_APP_CLIENT_ID=${{ secrets.COGNITO_APP_CLIENT_ID }}" >> .env

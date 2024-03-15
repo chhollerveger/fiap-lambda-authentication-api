@@ -28,6 +28,5 @@
     "_warmup/**/*",
     ".vscode/**/*",
     ".esbuild/**/*",
-    "dist/**/*"
   ],
 }
