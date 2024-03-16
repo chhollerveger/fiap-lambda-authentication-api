@@ -4,6 +4,27 @@
 
 ![Authentication Architecture](images/authentication-architecture.png "Authentication Architecture")
 
+### User Registration:
+- Users can sign up by accessing the registration link: `https://fiap-user-group.auth.***.amazoncognito.com/signup***`.
+- Fill out the registration form with your email and password.
+- After registration, Amazon Cognito will send a confirmation code to the user's email.
+- Users verify their email and confirm registration by clicking on the confirmation link.
+
+### User Login:
+- After successful registration confirmation, users can log in by accessing the login endpoint: `https://***.amazonaws.com/dev/v1/login`.
+- Send the user's credentials (email and password) to this endpoint.
+- The login endpoint verifies the credentials and returns an `accessToken` if the credentials are correct.
+- Users receive the `accessToken` as a response.
+
+### Using the `accessToken` for API Access:
+- Users can now use the received `accessToken` to authenticate in other parts of the system.
+- For example, users can make a request to the API using the `accessToken` in the authorization header (usually in the format `Bearer accessToken`).
+- The API verifies if the `accessToken` is valid and authorizes the request if it is.
+
+### Validating the `accessToken`:
+- Periodically, or with each request, the API can call the authorization endpoint `https://***.amazonaws.com/dev/v1/authorize` to validate the `accessToken`.
+- The authorization endpoint verifies if the `accessToken` is valid and returns a response indicating whether the `accessToken` is valid or not.
+
 ## Workflow Architecture
 
 ![Workflow Architecture](images/workflow-architecture.png "Workflow Architecture")
